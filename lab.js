@@ -6,8 +6,18 @@
   If it is not, console log "Coding has its challenges."
 */
 
-//CODE HERE
+const { countReset } = require("console");
 
+//CODE HERE
+const lovesCode = true;
+
+if (lovesCode){
+  //console.log("if ran")
+  console.log("I love to code!");
+} else {
+  //console.log("else ran")
+  console.log("Coding has its challenges");
+}
 // For problems 2-3 use the following lines of code:
 var amysAge = 29;
 var brittanisAge = 34;
@@ -21,7 +31,14 @@ var brittanisBirthYear = 1986;
 */
 
 //CODE HERE
-
+if (amysAge > brittanisAge){
+  console.log("Amy is older than Brittani.");
+} else if (brittanisAge > amysAge){
+  console.log("Brittani is older than Amy.");
+} else { 
+  console.log("Amy and Brittani are the same age!");
+}
+  
 ////////// PROBLEM 3 //////////
 
 /*
@@ -29,11 +46,15 @@ var brittanisBirthYear = 1986;
 */
 
 //CODE HERE
-
+if (amysBirthYear === brittanisBirthYear){
+  console.log('Amy & Brittani were born in the same year');
+} else {
+  console.log('Amy & Brittani were not born in the same year')
+}
 ////////// PROBLEM 4 //////////
 
-let temperature = 55;
-let rain = true;
+let temperature = 51;
+let rain = false;
 
 /*
   Using an if statement and a comparison operator, create code that will log a suggestion on what type of clothes one should wear for the day, based on the above temperature and rain.
@@ -41,7 +62,39 @@ let rain = true;
 */
 
 //CODE HERE
-
+if (temperature >= 80){
+  if (rain){
+    console.log("Wear a t-shirt and take an umbrella.");
+  } else {
+    console.log("Wear a longsleeve t-shirt, but no need for an umbrella.");
+  }
+} else if (temperature > 60 && temperature < 80){
+    if (rain){
+      console.log("Wear a rain jacket.");
+    } else {
+      console.log("Its perfect, wear what you want and leave your umbrella at home!");
+  }
+} else {
+    if (rain){
+      console.log("Wear a jacket and carry and umbrella.");
+    } else {
+      console.log("Still take your jacket, but leave the umbrella at home.");
+    }
+}
+//Dev Mountain solution
+if (temperature > 80 && rain) {
+  console.log('Wear a t-shirt and take an umbrella with you today')
+} else if (temperature > 60 && rain) {
+  console.log('Better wear a rain jacket today')
+} else if (temperature < 60 && rain) {
+  console.log('Wear a jacket and pack an umbrella')
+} else if (temperature > 80 && !rain) {
+  console.log('Looks like a day for a tank top')
+} else if (temperature > 60 && !rain) {
+  console.log('You might want a light jacket today')
+} else {
+  console.log('It will be a bit chilly out there today')
+}
 ////////// PROBLEM 5 //////////
 
 /*
@@ -49,7 +102,9 @@ let rain = true;
 */
 
 //CODE HERE
-
+for (let i = 0; i < 10; i++){
+  console.log("hello");
+}
 ////////// PROBLEM 6 //////////
 
 /*
@@ -57,7 +112,9 @@ let rain = true;
 */
 
 //CODE HERE
-
+for (let i = 1; i < 11; i++){
+  console.log(i);
+}
 ////////// PROBLEM 7 //////////
 
 /*
@@ -65,7 +122,9 @@ let rain = true;
 */
 
 //CODE HERE
-
+for (let i = 10; i > 0; i--){
+  console.log(i);
+}
 
 ////////// PROBLEM 8 //////////
 
@@ -77,7 +136,10 @@ let passingScore = 7;
 */
 
 //CODE HERE
-
+while (score < passingScore){
+  console.log("Your score is not high enough.")
+  score ++;
+}
 ////////// INTERMEDIATE PROBLEMS //////////
 
 ////////// PROBLEM 9 //////////
@@ -88,17 +150,35 @@ let passingScore = 7;
 */
 
 //CODE HERE
+let changeMyMind = true;
 
+if (changeMyMind){
+  changeMyMind = false;
+  console.log("True changed to False");
+} else {
+  changeMyMind = true;
+  console.log("False changed to True");
+}
 ////////// PROBLEM 10 //////////
 // Using the "not" operator (!), change the current value of changeMyMind to true (it should currently be set to false due to the if-else statement in Problem 9). After you change the value of changeMyMind, console.log it's new value (it should now read true).
 
 //CODE HERE
-
+if (changeMyMind != true){
+  changeMyMind = true;
+  console.log(changeMyMind);
+}
 ////////// ADVANCED PROBLEMS //////////
 
 ////////// PROBLEM 11 //////////
 
 let z = 5;
+
 // Create a while loop that continues to run while z is greater than 0. Within the while loop, log a countdown from the value of z to 1. Once you have logged the countdown, make sure you decrement z by 1. If your code is running properly, you should see: 5,4,3,2,1,4,3,2,1,3,2,1,2,1,1.
 
 //CODE HERE
+while (z > 0){
+  for (let i = z; i > 0; i--) {
+  console.log(i);
+  } 
+  z--
+}
